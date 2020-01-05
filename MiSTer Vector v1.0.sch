@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -14827,32 +14827,26 @@ Created 2014-07-09, Karrer Zheng&lt;br&gt;
 <pinref part="IC3" gate="D" pin="+IN"/>
 </segment>
 </net>
-<net name="DAC_CS_RG_N" class="0">
+<net name="DAC_CS_N" class="0">
 <segment>
-<wire x1="31.75" y1="76.2" x2="19.05" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="19.05" y1="76.2" x2="19.05" y2="107.95" width="0.1524" layer="91"/>
-<wire x1="19.05" y1="107.95" x2="2.54" y2="107.95" width="0.1524" layer="91"/>
-<label x="6.35" y="107.95" size="1.778" layer="95" rot="MR0"/>
+<wire x1="31.75" y1="76.2" x2="17.78" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="76.2" x2="17.78" y2="107.95" width="0.1524" layer="91"/>
+<label x="7.62" y="107.95" size="1.778" layer="95" rot="MR0"/>
 <pinref part="U2" gate="U" pin="#CS"/>
-</segment>
-<segment>
-<pinref part="USBIO" gate="G$1" pin="STDA_SSRX+"/>
-<wire x1="-40.64" y1="66.04" x2="-27.94" y2="66.04" width="0.1524" layer="91"/>
-<label x="-30.48" y="66.04" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="DAC_CS_BI_N" class="0">
-<segment>
-<wire x1="31.75" y1="19.05" x2="16.51" y2="19.05" width="0.1524" layer="91"/>
-<wire x1="2.54" y1="105.41" x2="16.51" y2="105.41" width="0.1524" layer="91"/>
-<wire x1="16.51" y1="19.05" x2="16.51" y2="105.41" width="0.1524" layer="91"/>
-<label x="6.35" y="105.41" size="1.778" layer="95" rot="MR0"/>
 <pinref part="U3" gate="U" pin="#CS"/>
+<wire x1="17.78" y1="107.95" x2="17.78" y2="133.35" width="0.1524" layer="91"/>
+<wire x1="31.75" y1="19.05" x2="17.78" y2="19.05" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="19.05" x2="17.78" y2="76.2" width="0.1524" layer="91"/>
+<junction x="17.78" y="76.2"/>
+<pinref part="U1" gate="U" pin="#CS"/>
+<wire x1="31.75" y1="133.35" x2="17.78" y2="133.35" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="107.95" x2="1.27" y2="107.95" width="0.1524" layer="91"/>
+<junction x="17.78" y="107.95"/>
 </segment>
 <segment>
-<pinref part="USBIO" gate="G$1" pin="GND_DRAIN"/>
-<wire x1="-40.64" y1="63.5" x2="-27.94" y2="63.5" width="0.1524" layer="91"/>
-<label x="-30.48" y="63.5" size="1.778" layer="95"/>
+<pinref part="USBIO" gate="G$1" pin="D+"/>
+<wire x1="-40.64" y1="73.66" x2="-27.94" y2="73.66" width="0.1524" layer="91"/>
+<label x="-30.48" y="73.66" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="I1+" class="0">
@@ -14879,20 +14873,6 @@ Created 2014-07-09, Karrer Zheng&lt;br&gt;
 <pinref part="CON2" gate="-1" pin="S"/>
 <wire x1="165.1" y1="66.04" x2="157.48" y2="66.04" width="0.1524" layer="91"/>
 <label x="160.02" y="66.04" size="1.778" layer="95" rot="MR0"/>
-</segment>
-</net>
-<net name="DAC_CS_XY_N" class="0">
-<segment>
-<wire x1="2.54" y1="110.49" x2="19.05" y2="110.49" width="0.1524" layer="91"/>
-<wire x1="19.05" y1="110.49" x2="19.05" y2="133.35" width="0.1524" layer="91"/>
-<wire x1="19.05" y1="133.35" x2="31.75" y2="133.35" width="0.1524" layer="91"/>
-<label x="6.35" y="110.49" size="1.778" layer="95" rot="MR0"/>
-<pinref part="U1" gate="U" pin="#CS"/>
-</segment>
-<segment>
-<pinref part="USBIO" gate="G$1" pin="STDA_SSRX-"/>
-<wire x1="-40.64" y1="68.58" x2="-27.94" y2="68.58" width="0.1524" layer="91"/>
-<label x="-30.48" y="68.58" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="DACY" class="0">
@@ -14937,48 +14917,38 @@ Created 2014-07-09, Karrer Zheng&lt;br&gt;
 <label x="-30.48" y="60.96" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="SPI_DAT" class="0">
+<net name="DAC_RG_DAT" class="0">
 <segment>
-<wire x1="24.13" y1="128.27" x2="31.75" y2="128.27" width="0.1524" layer="91"/>
-<wire x1="31.75" y1="71.12" x2="24.13" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="24.13" y1="71.12" x2="24.13" y2="95.25" width="0.1524" layer="91"/>
-<wire x1="24.13" y1="95.25" x2="24.13" y2="128.27" width="0.1524" layer="91"/>
-<wire x1="31.75" y1="13.97" x2="24.13" y2="13.97" width="0.1524" layer="91"/>
-<wire x1="24.13" y1="13.97" x2="24.13" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="2.54" y1="95.25" x2="24.13" y2="95.25" width="0.1524" layer="91"/>
-<junction x="24.13" y="71.12"/>
-<junction x="24.13" y="95.25"/>
-<label x="6.35" y="95.25" size="1.778" layer="95" rot="MR0"/>
-<pinref part="U1" gate="U" pin="SDI"/>
+<wire x1="31.75" y1="71.12" x2="1.27" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="U2" gate="U" pin="SDI"/>
-<pinref part="U3" gate="U" pin="SDI"/>
+<label x="7.62" y="71.12" size="1.778" layer="95" rot="MR0"/>
 </segment>
 <segment>
-<pinref part="USBIO" gate="G$1" pin="D-"/>
-<wire x1="-40.64" y1="76.2" x2="-27.94" y2="76.2" width="0.1524" layer="91"/>
-<label x="-30.48" y="76.2" size="1.778" layer="95"/>
+<pinref part="USBIO" gate="G$1" pin="STDA_SSRX+"/>
+<wire x1="-40.64" y1="66.04" x2="-27.94" y2="66.04" width="0.1524" layer="91"/>
+<label x="-30.48" y="66.04" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SPI_CLK" class="0">
 <segment>
 <wire x1="26.67" y1="130.81" x2="31.75" y2="130.81" width="0.1524" layer="91"/>
 <wire x1="31.75" y1="73.66" x2="26.67" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="26.67" y1="73.66" x2="26.67" y2="90.17" width="0.1524" layer="91"/>
-<wire x1="26.67" y1="90.17" x2="26.67" y2="130.81" width="0.1524" layer="91"/>
+<wire x1="26.67" y1="73.66" x2="26.67" y2="95.25" width="0.1524" layer="91"/>
+<wire x1="26.67" y1="95.25" x2="26.67" y2="130.81" width="0.1524" layer="91"/>
 <wire x1="31.75" y1="16.51" x2="26.67" y2="16.51" width="0.1524" layer="91"/>
 <wire x1="26.67" y1="16.51" x2="26.67" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="2.54" y1="90.17" x2="26.67" y2="90.17" width="0.1524" layer="91"/>
+<wire x1="1.27" y1="95.25" x2="26.67" y2="95.25" width="0.1524" layer="91"/>
 <junction x="26.67" y="73.66"/>
-<junction x="26.67" y="90.17"/>
-<label x="6.35" y="90.17" size="1.778" layer="95" rot="MR0"/>
+<junction x="26.67" y="95.25"/>
+<label x="7.62" y="95.25" size="1.778" layer="95" rot="MR0"/>
 <pinref part="U1" gate="U" pin="SCK"/>
 <pinref part="U2" gate="U" pin="SCK"/>
 <pinref part="U3" gate="U" pin="SCK"/>
 </segment>
 <segment>
-<pinref part="USBIO" gate="G$1" pin="D+"/>
-<wire x1="-40.64" y1="73.66" x2="-27.94" y2="73.66" width="0.1524" layer="91"/>
-<label x="-30.48" y="73.66" size="1.778" layer="95"/>
+<pinref part="USBIO" gate="G$1" pin="D-"/>
+<wire x1="-40.64" y1="76.2" x2="-27.94" y2="76.2" width="0.1524" layer="91"/>
+<label x="-30.48" y="76.2" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$10" class="0">
@@ -15041,6 +15011,30 @@ Created 2014-07-09, Karrer Zheng&lt;br&gt;
 <wire x1="177.8" y1="114.3" x2="177.8" y2="121.92" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="D" pin="OUT"/>
 <wire x1="177.8" y1="121.92" x2="172.72" y2="121.92" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="DAC_BI_DAT" class="0">
+<segment>
+<pinref part="U3" gate="U" pin="SDI"/>
+<wire x1="31.75" y1="13.97" x2="1.27" y2="13.97" width="0.1524" layer="91"/>
+<label x="7.62" y="13.97" size="1.778" layer="95" rot="MR0"/>
+</segment>
+<segment>
+<pinref part="USBIO" gate="G$1" pin="GND_DRAIN"/>
+<wire x1="-40.64" y1="63.5" x2="-27.94" y2="63.5" width="0.1524" layer="91"/>
+<label x="-30.48" y="63.5" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="DAC_XY_DAT" class="0">
+<segment>
+<pinref part="U1" gate="U" pin="SDI"/>
+<wire x1="3.81" y1="128.27" x2="31.75" y2="128.27" width="0.1524" layer="91"/>
+<label x="7.62" y="128.27" size="1.778" layer="95" rot="MR0"/>
+</segment>
+<segment>
+<pinref part="USBIO" gate="G$1" pin="STDA_SSRX-"/>
+<wire x1="-40.64" y1="68.58" x2="-27.94" y2="68.58" width="0.1524" layer="91"/>
+<label x="-30.48" y="68.58" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
