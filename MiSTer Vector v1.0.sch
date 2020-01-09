@@ -14675,7 +14675,7 @@ Based on the following sources:
 <sheets>
 <sheet>
 <plain>
-<text x="252.73" y="-59.69" size="2.1844" layer="94">6ESP</text>
+<text x="168.91" y="-46.99" size="2.1844" layer="94">6ESP</text>
 <text x="29.21" y="104.14" size="1.778" layer="91">4D</text>
 <text x="-78.74" y="76.2" size="1.778" layer="91">USBIO_TX</text>
 <text x="-78.74" y="73.66" size="1.778" layer="91">USBIO_RX</text>
@@ -14685,10 +14685,10 @@ Based on the following sources:
 <text x="-78.74" y="60.96" size="1.778" layer="91">USBIO_RTS</text>
 </plain>
 <instances>
-<instance part="FRAME1" gate="G$2" x="163.83" y="-67.31" smashed="yes">
-<attribute name="LAST_DATE_TIME" x="176.53" y="-66.04" size="2.54" layer="94" font="vector"/>
-<attribute name="SHEET" x="250.19" y="-66.04" size="2.54" layer="94" font="vector"/>
-<attribute name="DRAWING_NAME" x="181.61" y="-48.26" size="2.54" layer="94" font="vector"/>
+<instance part="FRAME1" gate="G$2" x="80.01" y="-54.61" smashed="yes">
+<attribute name="LAST_DATE_TIME" x="92.71" y="-53.34" size="2.54" layer="94" font="vector"/>
+<attribute name="SHEET" x="166.37" y="-53.34" size="2.54" layer="94" font="vector"/>
+<attribute name="DRAWING_NAME" x="97.79" y="-35.56" size="2.54" layer="94" font="vector"/>
 </instance>
 <instance part="U8" gate="G$1" x="-55.88" y="152.4"/>
 <instance part="SUPPLY1" gate="GND" x="-76.2" y="142.24"/>
@@ -15560,9 +15560,9 @@ Based on the following sources:
 <label x="7.62" y="13.97" size="1.778" layer="95" rot="MR0"/>
 </segment>
 <segment>
-<pinref part="USBIO" gate="G$1" pin="GND_DRAIN"/>
-<wire x1="-40.64" y1="63.5" x2="-27.94" y2="63.5" width="0.1524" layer="91"/>
-<label x="-30.48" y="63.5" size="1.778" layer="95"/>
+<pinref part="USBIO" gate="G$1" pin="STDA_SSTX-"/>
+<wire x1="-40.64" y1="60.96" x2="-27.94" y2="60.96" width="0.1524" layer="91"/>
+<label x="-30.48" y="60.96" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="DAC_XY_DAT" class="0">
@@ -15598,11 +15598,6 @@ Based on the following sources:
 </net>
 <net name="3D_SYNC_USBIO" class="0">
 <segment>
-<pinref part="USBIO" gate="G$1" pin="STDA_SSTX-"/>
-<wire x1="-40.64" y1="60.96" x2="-27.94" y2="60.96" width="0.1524" layer="91"/>
-<label x="-30.48" y="60.96" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="IC1" gate="C" pin="I0"/>
 <wire x1="-63.5" y1="7.62" x2="-66.04" y2="7.62" width="0.1524" layer="91"/>
 <wire x1="-66.04" y1="7.62" x2="-66.04" y2="5.08" width="0.1524" layer="91"/>
@@ -15612,6 +15607,11 @@ Based on the following sources:
 <wire x1="-66.04" y1="5.08" x2="-71.12" y2="5.08" width="0.1524" layer="91"/>
 <junction x="-66.04" y="5.08"/>
 <label x="-68.58" y="5.08" size="1.778" layer="95" rot="MR0"/>
+</segment>
+<segment>
+<pinref part="USBIO" gate="G$1" pin="GND_DRAIN"/>
+<wire x1="-40.64" y1="63.5" x2="-27.94" y2="63.5" width="0.1524" layer="91"/>
+<label x="-30.48" y="63.5" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$8" class="0">

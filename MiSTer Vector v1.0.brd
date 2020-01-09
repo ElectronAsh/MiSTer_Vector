@@ -1606,10 +1606,13 @@ Please make sure your boards conform to these design rules.</description>
 </signal>
 <signal name="DAC_BI_DAT">
 <contactref element="U3" pad="5"/>
-<contactref element="USBIO" pad="7"/>
-<wire x1="13.589" y1="44.196" x2="16.383" y2="44.196" width="0.254" layer="1"/>
 <wire x1="16.383" y1="44.196" x2="17.526" y2="45.339" width="0.254" layer="1"/>
 <wire x1="17.526" y1="45.339" x2="19.177" y2="45.339" width="0.254" layer="1"/>
+<contactref element="USBIO" pad="8"/>
+<wire x1="16.383" y1="44.196" x2="15.621" y2="44.196" width="0.254" layer="1"/>
+<via x="15.621" y="44.196" extent="1-16" drill="0.3302"/>
+<wire x1="15.621" y1="44.196" x2="13.621" y2="46.196" width="0.254" layer="16"/>
+<wire x1="13.621" y1="46.196" x2="13.589" y2="46.196" width="0.254" layer="16"/>
 </signal>
 <signal name="DAC_XY_DAT">
 <contactref element="U1" pad="5"/>
@@ -1638,18 +1641,17 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="8.674" y1="12.954" x2="15.596" y2="12.954" width="0.4064" layer="1"/>
 </signal>
 <signal name="3D_SYNC_USBIO">
-<contactref element="USBIO" pad="8"/>
 <contactref element="IC1" pad="9"/>
 <contactref element="IC1" pad="10"/>
-<wire x1="13.589" y1="46.196" x2="13.43" y2="46.355" width="0.254" layer="16"/>
-<wire x1="13.43" y1="46.355" x2="10.414" y2="46.355" width="0.254" layer="16"/>
-<wire x1="10.414" y1="46.355" x2="7.239" y2="43.18" width="0.254" layer="16"/>
-<wire x1="7.239" y1="43.18" x2="7.239" y2="25.654" width="0.254" layer="16"/>
 <via x="7.239" y="25.654" extent="1-16" drill="0.3302"/>
 <wire x1="7.239" y1="25.654" x2="7.239" y2="27.4066" width="0.254" layer="1"/>
 <wire x1="8.509" y1="27.4066" x2="8.509" y2="26.035" width="0.254" layer="1"/>
 <wire x1="8.509" y1="26.035" x2="8.128" y2="25.654" width="0.254" layer="1"/>
 <wire x1="8.128" y1="25.654" x2="7.239" y2="25.654" width="0.254" layer="1"/>
+<contactref element="USBIO" pad="7"/>
+<wire x1="7.239" y1="25.654" x2="7.239" y2="40.386" width="0.254" layer="16"/>
+<wire x1="7.239" y1="40.386" x2="11.049" y2="44.196" width="0.254" layer="16"/>
+<wire x1="11.049" y1="44.196" x2="13.589" y2="44.196" width="0.254" layer="16"/>
 </signal>
 <signal name="N$8">
 <contactref element="IC1" pad="12"/>
