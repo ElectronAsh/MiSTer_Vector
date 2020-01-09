@@ -15545,7 +15545,7 @@ Based on the following sources:
 <part name="P+13" library="supply1" deviceset="+5V" device=""/>
 <part name="SUPPLY13" library="supply2" deviceset="GND" device=""/>
 <part name="C11" library="adafruit" deviceset="C-US" device="C0603" value="0.1uF"/>
-<part name="X1" library="mini_din" deviceset="MINI_DIN_3" device=""/>
+<part name="X1" library="mini_din" deviceset="MINI_DIN_3" device="" value="miniDIN3"/>
 <part name="SUPPLY14" library="supply2" deviceset="GND" device=""/>
 <part name="P+14" library="supply1" deviceset="+5V" device=""/>
 <part name="SUPPLY15" library="supply2" deviceset="GND" device=""/>
@@ -16610,18 +16610,6 @@ Based on the following sources:
 <approved hash="104,1,99.06,162.56,IC2A,V-,-12V,,,"/>
 <approved hash="104,1,99.06,66.04,IC3A,V+,+12V,,,"/>
 <approved hash="104,1,99.06,50.8,IC3A,V-,-12V,,,"/>
-<approved hash="206,1,-121.92,160.02,+3V3,,,,,"/>
-<approved hash="206,1,-121.92,157.48,+3V3,,,,,"/>
-<approved hash="208,1,81.28,-30.48,+3V3,sup,,,,"/>
-<approved hash="208,1,-152.4,55.88,+3V3,sup,,,,"/>
-<approved hash="208,1,-116.84,162.56,+3V3,sup,,,,"/>
-<approved hash="208,1,-121.92,160.02,+3V3,out,,,,"/>
-<approved hash="208,1,-121.92,157.48,+3V3,out,,,,"/>
-<approved hash="208,1,71.12,-86.36,+3V3,sup,,,,"/>
-<approved hash="208,1,35.56,-35.56,+3V3,sup,,,,"/>
-<approved hash="208,1,-139.7,66.04,+3V3,sup,,,,"/>
-<approved hash="208,1,-101.6,-15.24,+3V3,sup,,,,"/>
-<approved hash="208,1,-35.56,-60.96,+3V3,sup,,,,"/>
 </errors>
 </schematic>
 </drawing>
