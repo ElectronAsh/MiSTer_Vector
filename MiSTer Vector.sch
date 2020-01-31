@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.0.1">
+<eagle version="7.1.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
-<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="100" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -18009,7 +18008,6 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <part name="PWR" library="dan-led" deviceset="LED" device="0805" value="SD_LED"/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
 <part name="P+2" library="supply1" deviceset="+5V" device=""/>
-<part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
 <part name="SUPPLY5" library="supply2" deviceset="GND" device=""/>
 <part name="VEC_OUT" library="con-molex" deviceset="22-23-2071" device=""/>
 <part name="SUPPLY11" library="supply2" deviceset="GND" device=""/>
@@ -18055,18 +18053,21 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <part name="R14" library="rcl" deviceset="R-EU_" device="R0603" value="100R"/>
 <part name="SUPPLY10" library="supply2" deviceset="GND" device=""/>
 <part name="C13" library="adafruit" deviceset="C-US" device="C0603" value="0.1uF"/>
+<part name="+3V2" library="supply1" deviceset="+3V3" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 <text x="168.91" y="-46.99" size="2.1844" layer="94">6ESP</text>
 <text x="29.21" y="104.14" size="1.778" layer="91">4D</text>
-<text x="-81.28" y="81.28" size="1.778" layer="91">USBIO_TX</text>
-<text x="-81.28" y="78.74" size="1.778" layer="91">USBIO_RX</text>
-<text x="-81.28" y="73.66" size="1.778" layer="91">USBIO_DSR</text>
-<text x="-81.28" y="71.12" size="1.778" layer="91">USBIO_DTR</text>
-<text x="-81.28" y="68.58" size="1.778" layer="91">USBIO_CTS</text>
-<text x="-81.28" y="66.04" size="1.778" layer="91">USBIO_RTS</text>
+<text x="-91.44" y="81.28" size="1.778" layer="91">USBIO_TX</text>
+<text x="-91.44" y="78.74" size="1.778" layer="91">USBIO_RX</text>
+<text x="-91.44" y="73.66" size="1.778" layer="91">USBIO_DSR</text>
+<text x="-91.44" y="71.12" size="1.778" layer="91">USBIO_DTR</text>
+<text x="-91.44" y="68.58" size="1.778" layer="91">USBIO_CTS</text>
+<text x="-91.44" y="66.04" size="1.778" layer="91">USBIO_RTS</text>
+<text x="-93.98" y="99.06" size="1.778" layer="91">RX/TX pairs get swapped in most USB 3.0 Type A cables!</text>
+<text x="-78.74" y="96.52" size="1.778" layer="91">So I had to swap them here, too.</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$2" x="80.01" y="-54.61" smashed="yes">
@@ -18106,11 +18107,11 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <instance part="R21" gate="G$1" x="121.92" y="124.46"/>
 <instance part="R35" gate="G$1" x="121.92" y="170.18"/>
 <instance part="P+12" gate="1" x="46.99" y="96.52"/>
-<instance part="IC7" gate="-1" x="-52.07" y="118.11"/>
-<instance part="C14" gate="G$1" x="-85.09" y="115.57"/>
-<instance part="C15" gate="G$1" x="-67.31" y="110.49"/>
-<instance part="SUPPLY8" gate="GND" x="-67.31" y="101.6"/>
-<instance part="SUPPLY18" gate="GND" x="-85.09" y="106.68"/>
+<instance part="IC7" gate="-1" x="-57.15" y="123.19"/>
+<instance part="C14" gate="G$1" x="-90.17" y="120.65"/>
+<instance part="C15" gate="G$1" x="-72.39" y="115.57"/>
+<instance part="SUPPLY8" gate="GND" x="-72.39" y="106.68"/>
+<instance part="SUPPLY18" gate="GND" x="-90.17" y="111.76"/>
 <instance part="U2" gate="U" x="46.99" y="68.58"/>
 <instance part="U3" gate="U" x="46.99" y="11.43"/>
 <instance part="P+8" gate="1" x="46.99" y="39.37"/>
@@ -18133,9 +18134,8 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <instance part="R17" gate="G$1" x="-50.8" y="172.72" rot="MR180"/>
 <instance part="PWR" gate="G$1" x="-66.04" y="172.72" rot="R90"/>
 <instance part="GND12" gate="1" x="-38.1" y="172.72" rot="R90"/>
-<instance part="P+2" gate="1" x="-40.64" y="93.98" rot="MR0"/>
-<instance part="+3V1" gate="G$1" x="-30.48" y="55.88" rot="MR90"/>
-<instance part="SUPPLY5" gate="GND" x="-40.64" y="53.34"/>
+<instance part="P+2" gate="1" x="-50.8" y="93.98" rot="MR0"/>
+<instance part="SUPPLY5" gate="GND" x="-50.8" y="53.34"/>
 <instance part="VEC_OUT" gate="-1" x="167.64" y="93.98"/>
 <instance part="VEC_OUT" gate="-2" x="167.64" y="91.44"/>
 <instance part="VEC_OUT" gate="-3" x="167.64" y="88.9"/>
@@ -18167,7 +18167,7 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <instance part="R4" gate="G$1" x="76.2" y="101.6"/>
 <instance part="R6" gate="G$1" x="121.92" y="144.78"/>
 <instance part="R8" gate="G$1" x="121.92" y="104.14"/>
-<instance part="J1" gate="G$1" x="-55.88" y="78.74" rot="MR0"/>
+<instance part="J1" gate="G$1" x="-66.04" y="78.74" rot="MR0"/>
 <instance part="3D_SYNC" gate="G$1" x="7.62" y="-5.08"/>
 <instance part="R11" gate="G$1" x="-30.48" y="-5.08"/>
 <instance part="SUPPLY3" gate="GND" x="-5.08" y="0" rot="R270"/>
@@ -18192,10 +18192,11 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <instance part="R22" gate="G$1" x="165.1" y="152.4"/>
 <instance part="R23" gate="G$1" x="165.1" y="114.3"/>
 <instance part="X_SIZE" gate="1" x="172.72" y="144.78" rot="R90"/>
-<instance part="P+4" gate="1" x="-85.09" y="125.73"/>
-<instance part="R14" gate="G$1" x="-74.93" y="120.65" rot="MR180"/>
-<instance part="SUPPLY10" gate="GND" x="-34.29" y="118.11" rot="R90"/>
+<instance part="P+4" gate="1" x="-90.17" y="130.81"/>
+<instance part="R14" gate="G$1" x="-80.01" y="125.73" rot="MR180"/>
+<instance part="SUPPLY10" gate="GND" x="-39.37" y="123.19" rot="R90"/>
 <instance part="C13" gate="G$1" x="-1.27" y="157.48"/>
+<instance part="+3V2" gate="G$1" x="-22.86" y="78.74" rot="MR0"/>
 </instances>
 <busses>
 </busses>
@@ -18310,14 +18311,14 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <pinref part="SUPPLY16" gate="GND" pin="GND"/>
 </segment>
 <segment>
-<wire x1="-67.31" y1="104.14" x2="-67.31" y2="105.41" width="0.1524" layer="91"/>
+<wire x1="-72.39" y1="109.22" x2="-72.39" y2="110.49" width="0.1524" layer="91"/>
 <pinref part="C15" gate="G$1" pin="2"/>
 <pinref part="SUPPLY8" gate="GND" pin="GND"/>
 </segment>
 <segment>
 <pinref part="C14" gate="G$1" pin="2"/>
 <pinref part="SUPPLY18" gate="GND" pin="GND"/>
-<wire x1="-85.09" y1="109.22" x2="-85.09" y2="110.49" width="0.1524" layer="91"/>
+<wire x1="-90.17" y1="114.3" x2="-90.17" y2="115.57" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="55.88" y1="35.56" x2="57.15" y2="35.56" width="0.1524" layer="91"/>
@@ -18350,12 +18351,12 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <wire x1="-40.64" y1="172.72" x2="-45.72" y2="172.72" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="-43.18" y1="76.2" x2="-40.64" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="-40.64" y1="76.2" x2="-40.64" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="-53.34" y1="76.2" x2="-50.8" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="-50.8" y1="76.2" x2="-50.8" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="SUPPLY5" gate="GND" pin="GND"/>
-<wire x1="-40.64" y1="60.96" x2="-40.64" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="-43.18" y1="60.96" x2="-40.64" y2="60.96" width="0.1524" layer="91"/>
-<junction x="-40.64" y="60.96"/>
+<wire x1="-50.8" y1="60.96" x2="-50.8" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="-53.34" y1="60.96" x2="-50.8" y2="60.96" width="0.1524" layer="91"/>
+<junction x="-50.8" y="60.96"/>
 <pinref part="J1" gate="G$1" pin="GND"/>
 <pinref part="J1" gate="G$1" pin="SHIELD"/>
 </segment>
@@ -18466,7 +18467,7 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <segment>
 <pinref part="SUPPLY10" gate="GND" pin="GND"/>
 <pinref part="IC7" gate="-1" pin="OUT"/>
-<wire x1="-36.83" y1="118.11" x2="-41.91" y2="118.11" width="0.1524" layer="91"/>
+<wire x1="-41.91" y1="123.19" x2="-46.99" y2="123.19" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="R+" class="0">
@@ -18618,8 +18619,8 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 </segment>
 <segment>
 <pinref part="P+2" gate="1" pin="+5V"/>
-<wire x1="-43.18" y1="83.82" x2="-40.64" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="-40.64" y1="83.82" x2="-40.64" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="-53.34" y1="83.82" x2="-50.8" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="-50.8" y1="83.82" x2="-50.8" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="J1" gate="G$1" pin="VBUS"/>
 </segment>
 <segment>
@@ -18645,11 +18646,11 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <segment>
 <pinref part="C14" gate="G$1" pin="1"/>
 <pinref part="P+4" gate="1" pin="+5V"/>
-<wire x1="-85.09" y1="118.11" x2="-85.09" y2="120.65" width="0.1524" layer="91"/>
+<wire x1="-90.17" y1="123.19" x2="-90.17" y2="125.73" width="0.1524" layer="91"/>
 <pinref part="R14" gate="G$1" pin="1"/>
-<wire x1="-85.09" y1="120.65" x2="-85.09" y2="123.19" width="0.1524" layer="91"/>
-<wire x1="-80.01" y1="120.65" x2="-85.09" y2="120.65" width="0.1524" layer="91"/>
-<junction x="-85.09" y="120.65"/>
+<wire x1="-90.17" y1="125.73" x2="-90.17" y2="128.27" width="0.1524" layer="91"/>
+<wire x1="-85.09" y1="125.73" x2="-90.17" y2="125.73" width="0.1524" layer="91"/>
+<junction x="-90.17" y="125.73"/>
 </segment>
 </net>
 <net name="G1+" class="0">
@@ -18741,14 +18742,14 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <segment>
 <pinref part="R14" gate="G$1" pin="2"/>
 <pinref part="IC7" gate="-1" pin="IN"/>
-<wire x1="-69.85" y1="120.65" x2="-67.31" y2="120.65" width="0.1524" layer="91"/>
-<wire x1="-67.31" y1="120.65" x2="-59.69" y2="120.65" width="0.1524" layer="91"/>
-<wire x1="-67.31" y1="120.65" x2="-67.31" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="-67.31" y1="129.54" x2="-60.96" y2="129.54" width="0.1524" layer="91"/>
-<junction x="-67.31" y="120.65"/>
-<label x="-63.5" y="129.54" size="1.778" layer="95"/>
+<wire x1="-74.93" y1="125.73" x2="-72.39" y2="125.73" width="0.1524" layer="91"/>
+<wire x1="-72.39" y1="125.73" x2="-64.77" y2="125.73" width="0.1524" layer="91"/>
+<wire x1="-72.39" y1="125.73" x2="-72.39" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="-72.39" y1="134.62" x2="-66.04" y2="134.62" width="0.1524" layer="91"/>
+<junction x="-72.39" y="125.73"/>
+<label x="-68.58" y="134.62" size="1.778" layer="95"/>
 <pinref part="C15" gate="G$1" pin="1"/>
-<wire x1="-67.31" y1="113.03" x2="-67.31" y2="120.65" width="0.1524" layer="91"/>
+<wire x1="-72.39" y1="118.11" x2="-72.39" y2="125.73" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$30" class="0">
@@ -18819,8 +18820,8 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <junction x="17.78" y="107.95"/>
 </segment>
 <segment>
-<wire x1="-43.18" y1="78.74" x2="-30.48" y2="78.74" width="0.1524" layer="91"/>
-<label x="-33.02" y="78.74" size="1.778" layer="95"/>
+<wire x1="-53.34" y1="78.74" x2="-40.64" y2="78.74" width="0.1524" layer="91"/>
+<label x="-43.18" y="78.74" size="1.778" layer="95"/>
 <pinref part="J1" gate="G$1" pin="D+"/>
 </segment>
 <segment>
@@ -18909,9 +18910,9 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <label x="7.62" y="71.12" size="1.778" layer="95" rot="MR0"/>
 </segment>
 <segment>
-<wire x1="-43.18" y1="71.12" x2="-30.48" y2="71.12" width="0.1524" layer="91"/>
-<label x="-33.02" y="71.12" size="1.778" layer="95"/>
-<pinref part="J1" gate="G$1" pin="STDA_SSRX+"/>
+<wire x1="-53.34" y1="63.5" x2="-40.64" y2="63.5" width="0.1524" layer="91"/>
+<label x="-43.18" y="63.5" size="1.778" layer="95"/>
+<pinref part="J1" gate="G$1" pin="STDA_SSTX+"/>
 </segment>
 </net>
 <net name="SPI_CLK" class="0">
@@ -18931,8 +18932,8 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <pinref part="U3" gate="U" pin="SCK"/>
 </segment>
 <segment>
-<wire x1="-43.18" y1="81.28" x2="-30.48" y2="81.28" width="0.1524" layer="91"/>
-<label x="-33.02" y="81.28" size="1.778" layer="95"/>
+<wire x1="-53.34" y1="81.28" x2="-40.64" y2="81.28" width="0.1524" layer="91"/>
+<label x="-43.18" y="81.28" size="1.778" layer="95"/>
 <pinref part="J1" gate="G$1" pin="D-"/>
 </segment>
 <segment>
@@ -18950,11 +18951,10 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 </net>
 <net name="+3V3" class="0">
 <segment>
-<wire x1="-43.18" y1="63.5" x2="-35.56" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="-35.56" y1="63.5" x2="-35.56" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="+3V1" gate="G$1" pin="+3V3"/>
-<wire x1="-35.56" y1="55.88" x2="-33.02" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="J1" gate="G$1" pin="STDA_SSTX+"/>
+<wire x1="-53.34" y1="71.12" x2="-22.86" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="+3V2" gate="G$1" pin="+3V3"/>
+<wire x1="-22.86" y1="71.12" x2="-22.86" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="J1" gate="G$1" pin="STDA_SSRX+"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -19034,9 +19034,9 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <label x="7.62" y="13.97" size="1.778" layer="95" rot="MR0"/>
 </segment>
 <segment>
-<wire x1="-43.18" y1="66.04" x2="-30.48" y2="66.04" width="0.1524" layer="91"/>
-<label x="-33.02" y="66.04" size="1.778" layer="95"/>
-<pinref part="J1" gate="G$1" pin="STDA_SSTX-"/>
+<wire x1="-53.34" y1="73.66" x2="-40.64" y2="73.66" width="0.1524" layer="91"/>
+<label x="-43.18" y="73.66" size="1.778" layer="95"/>
+<pinref part="J1" gate="G$1" pin="STDA_SSRX-"/>
 </segment>
 </net>
 <net name="DAC_XY_DAT" class="0">
@@ -19046,9 +19046,9 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <label x="7.62" y="128.27" size="1.778" layer="95" rot="MR0"/>
 </segment>
 <segment>
-<wire x1="-43.18" y1="73.66" x2="-30.48" y2="73.66" width="0.1524" layer="91"/>
-<label x="-33.02" y="73.66" size="1.778" layer="95"/>
-<pinref part="J1" gate="G$1" pin="STDA_SSRX-"/>
+<wire x1="-53.34" y1="66.04" x2="-40.64" y2="66.04" width="0.1524" layer="91"/>
+<label x="-43.18" y="66.04" size="1.778" layer="95"/>
+<pinref part="J1" gate="G$1" pin="STDA_SSTX-"/>
 </segment>
 </net>
 <net name="3D_SYNC_USBIO" class="0">
@@ -19064,8 +19064,8 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <label x="-68.58" y="10.16" size="1.778" layer="95" rot="MR0"/>
 </segment>
 <segment>
-<wire x1="-43.18" y1="68.58" x2="-30.48" y2="68.58" width="0.1524" layer="91"/>
-<label x="-33.02" y="68.58" size="1.778" layer="95"/>
+<wire x1="-53.34" y1="68.58" x2="-40.64" y2="68.58" width="0.1524" layer="91"/>
+<label x="-43.18" y="68.58" size="1.778" layer="95"/>
 <pinref part="J1" gate="G$1" pin="GND_DRAIN"/>
 </segment>
 </net>
